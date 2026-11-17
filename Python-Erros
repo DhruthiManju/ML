@@ -1,0 +1,228 @@
+PYTHON – TYPES OF ERRORS
+
+Errors are mistakes in a program that occur when we write incorrect code or perform an operation that Python cannot execute.
+
+Understanding errors helps us identify what went wrong, understand the reason behind it, and fix the code easily.
+
+1. SYNTAX ERROR
+
+A SyntaxError occurs when we don't follow Python's writing rules, such as forgetting brackets, colons, commas, or quotation marks.
+
+Example:
+
+print("Hello World"
+
+Error: Missing closing parenthesis ).
+
+Correction:
+
+print("Hello World")
+
+Output:
+Hello World
+
+
+2. INDENTATION ERROR
+
+Python uses spaces (indentation) to identify blocks of code. An IndentationError occurs when we don't provide proper spacing before statements inside conditions, loops, or functions.
+
+Example:
+
+if 10 > 5:
+print("10 is greater")
+
+Error: Missing indentation before print().
+
+Correction:
+
+if 10 > 5:
+    print("10 is greater")
+
+Output:
+10 is greater
+
+
+3. NAME ERROR
+
+A NameError occurs when we try to use a variable or name that has not been defined.
+
+Example:
+
+a = 10
+print(b)
+
+Error: Variable b is not defined.
+
+Correction:
+
+a = 10
+b = 20
+
+print(b)
+
+Output:
+20
+
+
+4. TYPE ERROR
+
+A TypeError occurs when we perform an operation using incompatible data types.
+
+Example:
+
+a = 10
+b = "20"
+
+print(a + b)
+
+Error: We cannot directly add an integer (int) and a string (str).
+
+Correction:
+
+a = 10
+b = "20"
+
+print(a + int(b))
+
+Output:
+30
+
+Explanation: The int() function converts the string "20" into the integer 20, allowing Python to perform addition.
+
+
+5. VALUE ERROR
+
+A ValueError occurs when the data type is correct, but the given value is not suitable for the operation.
+
+Example:
+
+a = int("hello")
+
+Error: The string "hello" cannot be converted into an integer.
+
+Correction:
+
+a = int("100")
+
+print(a)
+
+Output:
+100
+
+Explanation: The string "100" contains a valid integer representation, so Python can convert it into an integer.
+
+
+6. INDEX ERROR
+
+An IndexError occurs when we try to access an index that does not exist in a list, tuple, or string.
+
+Example:
+
+numbers = [10, 20, 30]
+
+print(numbers[5])
+
+Error: Index 5 does not exist in the list.
+
+Explanation: List indexing starts from 0.
+
+Element     Index
+10              0
+20              1
+30              2
+
+Correction:
+
+numbers = [10, 20, 30]
+
+print(numbers[2])
+
+Output:
+30
+
+
+7. KEY ERROR
+
+A KeyError occurs when we try to access a dictionary key that is not available in the dictionary.
+
+Example:
+
+student = {"name": "Student", "age": 22}
+
+print(student["marks"])
+
+Error: The key "marks" is not present in the dictionary.
+
+Correction:
+
+student = {"name": "Student", "age": 22}
+
+print(student["name"])
+
+Output:
+Student
+
+Explanation: The dictionary contains the keys "name" and "age". We can access only the keys that exist, unless we use methods such as get() to handle missing keys safely.
+
+
+8. ZERO DIVISION ERROR
+
+A ZeroDivisionError occurs when we try to divide a number by zero.
+
+Example:
+
+a = 10
+b = 0
+
+print(a / b)
+
+Error: Division by zero is not allowed in Python.
+
+Correction:
+
+a = 10
+b = 2
+
+print(a / b)
+
+Output:
+5.0
+
+Explanation: We changed the denominator from 0 to 2 to perform a valid division.
+
+
+9. ATTRIBUTE ERROR
+
+An AttributeError occurs when we try to use a method or attribute that is not available for a particular object or data type.
+
+Example:
+
+a = 10
+
+a.append(20)
+
+Error: append() is a list method. It cannot be used with an integer.
+
+Correction:
+
+a = [10, 20]
+
+a.append(30)
+
+print(a)
+
+Output:
+[10, 20, 30]
+
+Explanation: The append() method is used to add an element to the end of a list.
+
+
+10. IMPORT ERROR
+
+An ImportError occurs when we try to import a name that is not available in a module.
+
+Example:
+
+from math import addition
+
+Error: The math module
